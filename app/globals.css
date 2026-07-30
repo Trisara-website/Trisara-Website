@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-inter), sans-serif;
+}
+
+::selection {
+  background: #a31621;
+  color: #fff;
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-inter), sans-serif;
+  }
+
+  /* Scalloped arch shape used for the About portrait + space cards */
+  .arch-frame {
+    border-radius: 50% 50% 4px 4px / 22% 22% 4px 4px;
+  }
+
+  /* Scroll-reveal: toggled by the useReveal hook adding "is-visible" */
+  .reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity 0.8s cubic-bezier(0.22, 0.8, 0.32, 1),
+      transform 0.8s cubic-bezier(0.22, 0.8, 0.32, 1);
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Masonry gallery: CSS columns auto-balance portrait/landscape without gaps */
+  .masonry-columns {
+    column-gap: 1rem;
+  }
+  .masonry-item {
+    break-inside: avoid;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
