@@ -4,7 +4,7 @@ const LeadSchema = new mongoose.Schema(
   {
     name: { type: String, required: true, trim: true },
     phone: { type: String, required: true, trim: true },
-    offer: { type: String, default: "20% off" },
+    offer: { type: String, default: "10% off" },
     status: {
       type: String,
       enum: ["new", "contacted", "converted", "dropped"],

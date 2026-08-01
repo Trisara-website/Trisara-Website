@@ -74,7 +74,7 @@ export default function OfferPopup() {
               Congratulations
             </div>
             <h3 className="mt-2 font-display text-[1.7rem] text-ink">
-              You&apos;ve unlocked 20% off!
+              You&apos;ve unlocked 10% off!
             </h3>
             <p className="mt-2.5 text-[.98rem] text-ink/65">
               Just leave your name &amp; number — our team will call you to lock in the offer before dates fill up.
