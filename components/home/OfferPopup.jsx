@@ -97,7 +97,7 @@ export default function OfferPopup() {
                 className="w-full rounded-md border border-ink/20 bg-paper px-3.5 py-3 font-body text-base outline-none focus:border-maroon"
               />
               <button type="submit" disabled={submitting} className="mt-1 w-full bg-maroon px-9 py-4 text-[.8rem] uppercase tracking-[2.5px] text-white transition-colors hover:bg-maroonDeep disabled:opacity-60">
-                {submitting ? "Submitting…" : "Claim My 20% Off"}
+                {submitting ? "Submitting…" : "Claim My 10% Off"}
               </button>
             </form>
             {error && <p className="mt-3 text-[.85rem] text-vermillion">{error}</p>}
