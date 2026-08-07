@@ -66,11 +66,19 @@ export default function BookingForm() {
           const body = await res.json().catch(() => ({}));
           throw new Error(body.error || "Something went wrong. Please try again.");
         }
+        // Booking succeeded
+window.gtag?.("event", "conversion", {
+  send_to: "AW-11467424691/xCyNCLib8N0cELOHjNwq",
+});
+
         setSubmitted(true);
       } catch (err) {
         setError(err.message);
       } finally {
         setSubmitting(false);
+        window.gtag('event', 'conversion', {
+  send_to: 'AW-11467424691/xCyNCLib8N0cELOHjNwq'
+});
       }
       return;
     }
