@@ -6,6 +6,7 @@ import JsonLd from "@/components/JsonLd";
 import FloatingContact from "@/components/FloatingContact";
 import { siteConfig } from "@/lib/site-config";
 import { getLocalBusinessSchema } from "@/lib/schema";
+import Script from "next/script";
 
 const inter = Inter({
   subsets: ["latin"],
