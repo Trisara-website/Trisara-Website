@@ -54,6 +54,14 @@ export default function RootLayout({ children }) {
         {children}
         <Footer />
         <FloatingContact />
+<Script async src="https://www.googletagmanager.com/gtag/js?id=AW-11467424691"></Script>
+<Script>
+  {`window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-11467424691');`}
+</Script>
       </body>
     </html>
   );
