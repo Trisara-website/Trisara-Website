@@ -1,5 +1,6 @@
 import { Phone, MessageCircle } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
+import { FaWhatsapp } from "react-icons/fa";
 
 const WHATSAPP_MESSAGE =
   "Hi! I just saw your venue and it looks amazing 😍 Can I get more details on this?";
@@ -18,12 +19,12 @@ export default function FloatingContact() {
         aria-label="Chat with us on WhatsApp"
         className="group relative flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-black/20 transition-transform hover:scale-105"
       >
-        <MessageCircle size={26} fill="white" className="text-[#25D366]" />
+        <FaWhatsapp size={28}/>
         <span className="pointer-events-none absolute right-16 whitespace-nowrap rounded-md bg-ink px-3 py-1.5 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100">
           Chat on WhatsApp
         </span>
       </a>
-
+      
       <a
         href={siteConfig.phoneHref}
         aria-label="Call Trisara"

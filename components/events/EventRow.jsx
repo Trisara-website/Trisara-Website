@@ -31,6 +31,7 @@ export default function EventRow({ event, reversed = false }) {
             </span>
           ))}
         </div>
+        <Link href="#" className="mt-6 inline-flex items-center p-1 px-3 text-[.85rem] uppercase tracking-[2px] mr-4 text-gold font-medium hover:scale-[1.05] transition-all ease-in duration-300">Enquire Now</Link>
         <Link href="/booking" className="mt-6 inline-flex items-center gap-2 border-b border-ink pb-1 text-[.85rem] uppercase tracking-[2px] text-ink">
           Book this event <ArrowRight size={15} />
         </Link>
