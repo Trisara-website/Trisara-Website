@@ -16,6 +16,16 @@ function reportGoogleConversion() {
   }
 }
 
+// function to trigger Meta Pixel for conversion.
+function reportMetaLead() {
+  if (
+    typeof window !== "undefined" &&
+    typeof window.fbq === "function"
+  ) {
+    window.fbq("track", "Lead");
+  }
+}
+
 export default function OfferPopup() {
   const [open, setOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -84,8 +94,9 @@ export default function OfferPopup() {
         );
       }
 
-      // Fire Google Ads conversion ONLY after successful submission
+      // Fire Google Ads conversion & Meta Pixel ONLY after successful submission
       reportGoogleConversion();
+      reportMetaLead()
 
       setSubmitted(true);
     } catch (err) {
