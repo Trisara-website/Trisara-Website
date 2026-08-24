@@ -18,16 +18,11 @@ function reportGoogleConversion() {
 
 // function to trigger Meta Pixel for conversion.
 function reportMetaLead() {
-  console.log("🔥 META LEAD FUNCTION CALLED");
-
   if (
     typeof window !== "undefined" &&
     typeof window.fbq === "function"
   ) {
-    console.log("🔥 FBQ EXISTS — SENDING LEAD");
     window.fbq("track", "Lead");
-  } else {
-    console.log("❌ FBQ DOES NOT EXIST");
   }
 }
 
@@ -98,7 +93,7 @@ export default function OfferPopup() {
           body.error || "Something went wrong. Please try again."
         );
       }
-console.log("✅ FORM SUBMITTED SUCCESSFULLY");
+
       // Fire Google Ads conversion & Meta Pixel ONLY after successful submission
       reportGoogleConversion();
       reportMetaLead()
