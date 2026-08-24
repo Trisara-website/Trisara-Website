@@ -1,4 +1,3 @@
-```jsx
 "use client";
 
 import { useEffect, useState } from "react";
@@ -294,4 +293,4 @@ export default function EnquireModal({
     document.body
   );
 }
-```
+
