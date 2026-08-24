@@ -21,14 +21,18 @@ function reportGoogleConversion() {
 
 //function to report to META Ads
 function reportMetaLead() {
+  console.log("🔥 META LEAD FUNCTION CALLED");
+
   if (
     typeof window !== "undefined" &&
     typeof window.fbq === "function"
   ) {
+    console.log("🔥 FBQ EXISTS — SENDING LEAD");
     window.fbq("track", "Lead");
+  } else {
+    console.log("❌ FBQ DOES NOT EXIST");
   }
 }
-
 export default function EnquireModal({
   open,
   onClose,
