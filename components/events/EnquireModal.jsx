@@ -19,6 +19,16 @@ function reportGoogleConversion() {
   }
 }
 
+//function to report to META Ads
+function reportMetaLead() {
+  if (
+    typeof window !== "undefined" &&
+    typeof window.fbq === "function"
+  ) {
+    window.fbq("track", "Lead");
+  }
+}
+
 export default function EnquireModal({
   open,
   onClose,
@@ -136,8 +146,9 @@ export default function EnquireModal({
         );
       }
 
-      // Fire Google Ads conversion ONLY after successful submission.
+      // Fire Google Ads conversion & Meta Pixel ONLY after successful submission.
       reportGoogleConversion();
+      reportMetaLead();
 
       setSubmitted(true);
     } catch (err) {
